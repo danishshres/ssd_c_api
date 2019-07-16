@@ -1,0 +1,10 @@
+﻿C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets(391,5): warning MSB8028: The intermediate directory (x64\Release\) contains files shared from another project (ConsoleApplication5.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+  pch.cpp
+  ConsoleApplication5.cpp
+d:\programfiles\tensorflow_c\include\tensorflow\c\c_api.h(1146): warning C4190: 'TF_NewWhile' has C-linkage specified, but returns UDT 'TF_WhileParams' which is incompatible with C
+  d:\programfiles\tensorflow_c\include\tensorflow\c\c_api.h(1102): note: see declaration of 'TF_WhileParams'
+d:\projects\tensorflow_c_api_ssd\consoleapplication5\consoleapplication5.cpp(121): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+  Generating code
+  All 318 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Finished generating code
+  ConsoleApplication5.vcxproj -> D:\Projects\Tensorflow_C_Api_Ssd\x64\Release\Tensorflow_C_api_SSD.exe
