@@ -166,7 +166,7 @@ void Network::Run(cv::Mat image)
 void Network::Deallocator(void* data, size_t length, void* arg)
 {
 	
-	std::free(data);
+	//std::free(data);
 }
 
 int main()
