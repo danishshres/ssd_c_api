@@ -139,6 +139,7 @@ void Network::Run(cv::Mat image)
 	}
 	std::cout << detection_classes;
 	//free output
+	std::free(output_values);
 }
 
 void Network::Deallocator(void* data, size_t length, void* arg)
