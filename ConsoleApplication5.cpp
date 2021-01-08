@@ -138,10 +138,16 @@ void Network::Run(cv::Mat image)
 		std::cout << "\n";
 	}
 	std::cout << detection_classes;
+	//free output
 }
 
 void Network::Deallocator(void* data, size_t length, void* arg)
 {
+	TF_DeleteGraph(graph);
+	status = TF_NewStatus();
+	TF_DeleteSession(session, status);
+	TF_DeleteSessionOptions(SessionOpts);
+	TF_DeleteStatus(status);
 	std::free(data);
 }
 
