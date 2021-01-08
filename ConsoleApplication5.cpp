@@ -139,7 +139,28 @@ void Network::Run(cv::Mat image)
 	}
 	std::cout << detection_classes;
 	//free output
-	std::free(output_values);
+	TF_DeleteStatus(status);
+
+	inputs.clear();
+	inputs.shrink_to_fit();
+
+	for (auto& t : input_values) {
+		TF_DeleteTensor(t);
+	}
+
+	input_values.clear();
+	input_values.shrink_to_fit();
+
+	/*for (size_t i = 0; i < output_values.size(); ++i)
+	{
+		const auto data = static_cast<float*>(TF_TensorData(output_values.at(i)));
+		printf("%f", data[1]);
+	}*/
+	for (auto& t : output_values) {
+		TF_DeleteTensor(t);
+	}
+	output_values.clear();
+	output_values.shrink_to_fit();
 }
 
 void Network::Deallocator(void* data, size_t length, void* arg)
